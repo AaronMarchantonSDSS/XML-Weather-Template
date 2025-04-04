@@ -19,7 +19,22 @@ namespace XMLWeather
 
         public void DisplayCurrent()
         {
+            //Display date and time
+            int currentMin = DateTime.Now.Minute;
+            int currentHour = DateTime.Now.Hour;
+            dateOutput.Text = $"{DateTime.Now.ToString("dddd MMMM, d")}, {currentHour}:{currentMin}";
 
+            //Display location
+            cityOutput.Text = Form1.days[0].location;
+
+            //Display temperature
+            currentTempOutput.Text = Form1.days[0].currentTemp;
+            minOutput.Text = Form1.days[0].tempLow;
+            maxOutput.Text = Form1.days[0].tempHigh;
+
+            //Display the conditions
+            conditionsTextOutput.Text = Form1.days[0].condition;
+            conditionsOutput.Image = 
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)
