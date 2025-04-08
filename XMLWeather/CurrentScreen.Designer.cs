@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentScreen));
             this.minOutput = new System.Windows.Forms.Label();
             this.currentTempOutput = new System.Windows.Forms.Label();
             this.todayLabel = new System.Windows.Forms.Label();
@@ -72,7 +71,7 @@
             this.todayLabel.BackColor = System.Drawing.Color.Transparent;
             this.todayLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todayLabel.ForeColor = System.Drawing.Color.Black;
-            this.todayLabel.Location = new System.Drawing.Point(601, 0);
+            this.todayLabel.Location = new System.Drawing.Point(625, 0);
             this.todayLabel.Name = "todayLabel";
             this.todayLabel.Size = new System.Drawing.Size(83, 28);
             this.todayLabel.TabIndex = 40;
@@ -87,7 +86,7 @@
             this.forecastLabel.Name = "forecastLabel";
             this.forecastLabel.Size = new System.Drawing.Size(83, 28);
             this.forecastLabel.TabIndex = 41;
-            this.forecastLabel.Text = "7 Day";
+            this.forecastLabel.Text = "4 Day";
             this.forecastLabel.Click += new System.EventHandler(this.forecastLabel_Click);
             // 
             // maxOutput
@@ -206,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::XMLWeather.Properties.Resources.Backdrop;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.minLabel);
             this.Controls.Add(this.maxLabel);
