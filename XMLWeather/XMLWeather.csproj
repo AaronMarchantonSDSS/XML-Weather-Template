@@ -118,6 +118,72 @@
   <ItemGroup>
     <None Include="Resources\Untitled design %2823%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3104612.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4150904.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\414866.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3222807.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13323449.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4922779.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3222807 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13323449 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4922779 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3104612 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rain250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snow250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Storm250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sun250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rain130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sun130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Storm130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snow130.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

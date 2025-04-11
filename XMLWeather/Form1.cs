@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Aaron Marchanton
+//11 April, 2025
+//Weather App
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +20,12 @@ namespace XMLWeather
         //Create list to hold day objects
         public static List<Day> days = new List<Day>();
 
+        //Create strings to hold location information
+        public static string currentLocation;
+
+        public static string currentCity = "Stratford";
+        public static string currentCountry = "CA";
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +38,7 @@ namespace XMLWeather
             this.Controls.Add(cs);
         }
 
-        private void ExtractForecast()
+        public static void ExtractForecast()
         {
             XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/forecast/daily?q=Stratford,CA&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0");
 
@@ -43,7 +53,7 @@ namespace XMLWeather
 
                 //find symbol element and get the condition attribute
                 reader.ReadToFollowing("symbol");
-                d.conditionNumber = reader.GetAttribute("number");
+                d.conditionNumber = Convert.ToInt16(reader.GetAttribute("number"));
                 d.condition = reader.GetAttribute("name");
 
                 //find temperature element and get the min and max attribute
@@ -56,10 +66,11 @@ namespace XMLWeather
             }
         }
 
-        private void ExtractCurrent()
+        public static void ExtractCurrent()
         {
             //Current info is not included in forecast file so we need to use this file to get it
-            XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/weather?q=Stratford,CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
+            currentLocation = $"{currentCity}, {currentCountry}";
+            XmlReader reader = XmlReader.Create($"http://api.openweathermap.org/data/2.5/weather?q={currentLocation}&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
 
             //Find the city and current temperature and add to appropriate item in days list
             reader.ReadToFollowing("city");
@@ -69,6 +80,7 @@ namespace XMLWeather
             days[0].currentTemp = reader.GetAttribute("value");
 
             reader.ReadToFollowing("weather");
+            days[0].conditionNumber = Convert.ToInt16(reader.GetAttribute("number"));
             days[0].condition = reader.GetAttribute("value");
         }
     }
